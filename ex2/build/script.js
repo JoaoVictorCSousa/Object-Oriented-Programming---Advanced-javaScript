@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var PromptSync = require("prompt-sync");
+var ContaBancaria_1 = require("./ContaBancaria");
+var prompt = PromptSync();
+var nome = prompt('Digite seu nome: ');
+var idade = Number(prompt('Digite sua idade: '));
+var senha = Number(prompt('Digite sua senha: '));
+var quantidade = Number(prompt('Digite a quantidade que você tem atualmente: '));
+var contabancaria = new ContaBancaria_1.ContaBancaria(nome, idade, senha, quantidade);
+var contaDeposito = Number(prompt('Digite a quantidade que deseja depositar: '));
+contabancaria.depositar;
+console.log("".concat(nome, "\n ").concat(idade, "\n ").concat(senha, "\n Total na conta ap\u00F3s dep\u00F3sito: ").concat(contabancaria.quantidade));
